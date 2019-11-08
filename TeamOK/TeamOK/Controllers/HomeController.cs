@@ -10,7 +10,7 @@ namespace TeamOK.Controllers
 {
     public class HomeController : Controller
     {
-        // Hậu
+        // Hậu 1
         public IActionResult Index()
         {
             return View();
