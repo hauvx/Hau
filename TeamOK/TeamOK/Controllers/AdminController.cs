@@ -7,15 +7,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Web42Shop.Models;
-using Web42Shop.Data;
-using Web42Shop.ViewModels;
+using TeamOK.Models;
+
+using TeamOK.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using TeamOK.Data;
 
-namespace Web42Shop.Controllers
+namespace TeamOK.Controllers
 {
 
     public class AdminController : Controller

@@ -1,33 +1,32 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Web42Shop.Models;
-using Web42Shop.ViewModels;
+using TeamOK.Models;
 
-namespace Web42Shop.Data
-{ 
-    public class Web42ShopDbContext:DbContext
+namespace TeamOK.Data
+{
+    public class TeamOKDbContext : DbContext
     {
-        public Web42ShopDbContext(DbContextOptions<Web42ShopDbContext> options) : base(options) { }
+        public TeamOKDbContext(DbContextOptions<TeamOKDbContext> options) : base(options) { }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<Cart> Carts{get;set;}
-        public DbSet<CartDetail> CartDetails{get;set;}
-        public DbSet<CartStatus> CartStatuses{get;set;}
-        public DbSet<Comment> Comments{get;set;}
-        public DbSet<CommentReply> CommentReplies{get;set;}
-        public DbSet<Order> Orders{get;set;}
-        public DbSet<OrderDetail> OrderDetails{get;set;}
-        public DbSet<OrderStatus> OrderStatuses{get;set;}
-        public DbSet<Product> Products{ get;set;}
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartDetail> CartDetails { get; set; }
+        public DbSet<CartStatus> CartStatuses { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<CommentReply> CommentReplies { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<ProductBrand> ProductBrands { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
-        public DbSet<PayStatus> PayStatuses{get;set;}
-        public DbSet<PayType> PayTypes{get;set;}
+        public DbSet<PayStatus> PayStatuses { get; set; }
+        public DbSet<PayType> PayTypes { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Setting> Settings { get; set; }
-        public DbSet<Slug> Slugs{get;set;}      
+        public DbSet<Slug> Slugs { get; set; }
         public DbSet<User> Users { get; set; }
 
         // Tạo chỉ mục Unique Index cho các trường của từng bảng
@@ -39,7 +38,7 @@ namespace Web42Shop.Data
             // Bảng Admin
             modelBuilder.Entity<Admin>().HasIndex(a => a.Username).IsUnique();
             modelBuilder.Entity<Admin>().HasIndex(a => a.Email).IsUnique();
-          //  modelBuilder.Entity<Product>().HasIndex(a => a.Name).IsUnique();
+            //  modelBuilder.Entity<Product>().HasIndex(a => a.Name).IsUnique();
             // Bảng Setting
             modelBuilder.Entity<Setting>().HasIndex(s => s.Name).IsUnique();
 
@@ -80,6 +79,7 @@ namespace Web42Shop.Data
         }
 
         // Public các ViewModel
-        
+
     }
 }
+

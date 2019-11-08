@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Web42Shop.Models;
+using TeamOK.Models;
 
-namespace Web42Shop.ViewModels
+namespace TeamOK.ViewModels
 {
     public class ProductBrandsViewModel
     {

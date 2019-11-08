@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Web42Shop.Models;
+using TeamOK.Models;
 
-namespace Web42Shop.Controllers
+namespace TeamOK.Controllers
 {
     public class HomeController : Controller
     {

@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Web42Shop.Data;
-using Web42Shop.Models;
+using TeamOK.Data;
+using TeamOK.Models;
 
-namespace Web42Shop.Controllers
+namespace TeamOK.Controllers
 {
     public class ProductTypesController : Controller
     {

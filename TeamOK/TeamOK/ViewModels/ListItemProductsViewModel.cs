@@ -1,8 +1,8 @@
-using Web42Shop;
-using Web42Shop.Data;
-using Web42Shop.Models;
+using TeamOK;
+using TeamOK.Data;
+using TeamOK.Models;
 using System.Collections.Generic;
-namespace Web42Shop.ViewModels
+namespace TeamOK.ViewModels
 {
     public class ListItemProductsViewModel
     {

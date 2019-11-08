@@ -1,6 +1,6 @@
 using System;
 
-namespace Web42Shop.Models
+namespace TeamOK.Models
 {
     public class ErrorViewModel
     {
