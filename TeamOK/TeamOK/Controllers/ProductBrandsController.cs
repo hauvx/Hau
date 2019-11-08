@@ -13,9 +13,9 @@ namespace Web42Shop.Controllers
 {
     public class ProductBrandsController : Controller
     {
-        private readonly Web42ShopDbContext _context;
+        private readonly TeamOKDbContext _context;
 
-        public ProductBrandsController(Web42ShopDbContext context)
+        public ProductBrandsController(TeamOKDbContext context)
         {
             _context = context;
         }

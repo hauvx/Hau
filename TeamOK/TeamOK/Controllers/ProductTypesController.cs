@@ -12,9 +12,9 @@ namespace Web42Shop.Controllers
 {
     public class ProductTypesController : Controller
     {
-        private readonly Web42ShopDbContext _context;
+        private readonly TeamOKDbContext _context;
 
-        public ProductTypesController(Web42ShopDbContext context)
+        public ProductTypesController(TeamOKDbContext context)
         {
             _context = context;
         }

@@ -20,11 +20,11 @@ namespace Web42Shop.Controllers
 
     public class AdminController : Controller
     {
-        private readonly Web42ShopDbContext _context;
+        private readonly TeamOKDbContext _context;
         private readonly IHostingEnvironment _hostingEnviroment;
 
         
-        public AdminController(Web42ShopDbContext context,IHostingEnvironment hostingEnvironment)
+        public AdminController(TeamOKDbContext context,IHostingEnvironment hostingEnvironment)
         {
             _context = context;
             _hostingEnviroment = hostingEnvironment;

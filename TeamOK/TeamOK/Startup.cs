@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TeamOK.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace TeamOK
 {
@@ -33,6 +36,20 @@ namespace TeamOK
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<TeamOKDbContext>(dbContextOptionBuilder => dbContextOptionBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddSession(p =>
+            {
+                p.IdleTimeout = TimeSpan.FromMinutes(5);
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                {
+                    opt.LoginPath = "/Admin/Login";
+                    opt.AccessDeniedPath = "/Home/AccessDenied";
+                    opt.LogoutPath = "/KhachHang/Logout";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +65,7 @@ namespace TeamOK
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
