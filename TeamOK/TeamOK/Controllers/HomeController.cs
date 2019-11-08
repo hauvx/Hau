@@ -4,19 +4,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TeamOK.Models;
+using Web42Shop.Models;
 
-namespace TeamOK.Controllers
+namespace Web42Shop.Controllers
 {
     public class HomeController : Controller
     {
-        // Hậu 1
+        // Trang chủ
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
