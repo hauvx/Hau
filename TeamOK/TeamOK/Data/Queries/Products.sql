@@ -1,4 +1,4 @@
-﻿use Web42Shop
+﻿
 go
 /*thêm dữ liệu tạm cho bảng roles*/
 insert into Roles(Name) values(N'Nhân viên nhập hàng')
